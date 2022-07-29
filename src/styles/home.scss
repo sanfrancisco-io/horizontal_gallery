@@ -1,0 +1,56 @@
+@import url('https://fonts.googleapis.com/css?family=Oswald:300;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Merriweather:wght@300;400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@100;200;300;400;500;600;700;800;900&display=swap');
+body {
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto,
+    Ubuntu, 'Helvetica Neue', sans-serif;
+}
+
+.main-container {
+  padding-right: 500px;
+  box-sizing: border-box;
+}
+
+.content {
+  display: flex;
+  height: 100vh;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(50, 2%);
+  grid-template-rows: repeat(50, 2%);
+  width: 250vw;
+  padding-left: 12vw;
+  height: 100%;
+  position: relative;
+  align-items: center;
+  background-color: #fff;
+}
+
+.gallery-helper {
+  grid-area: 43/1 / span 2 / span 1;
+  font-size: 20px;
+}
+
+.behind-text {
+  position: absolute;
+  top: 50%;
+  left: 15%;
+  transform: translate(-50%, -50%);
+  text-transform: uppercase;
+  font-size: 12em;
+  font-weight: 500;
+  letter-spacing: 50px;
+
+  &.fill {
+    color: rgba(0, 0, 0, 0.2);
+  }
+  &.outline {
+    z-index: 2;
+    mix-blend-mode: overlay;
+  }
+}
